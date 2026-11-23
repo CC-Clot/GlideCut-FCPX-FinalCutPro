@@ -1,0 +1,4 @@
+# GitHub Sponsor 按钮入口
+# 统一跳转到仓库内的赞助说明页，页面中展示微信与支付宝二维码。
+custom:
+  - https://github.com/CC-Clot/GlideCut/blob/main/Docs/Sponsor.md
