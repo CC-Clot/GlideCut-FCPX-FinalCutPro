@@ -1,7 +1,11 @@
-# GlideCut
+# GlideCut｜FCPX / Final Cut Pro 时间线滚轮增强插件
+
+> macOS 菜单栏辅助工具（非 FCPX 内置插件），为 Final Cut Pro / FCPX / FinalCut 提供滚轮增强：时间线平移、缩放与修饰键映射。
 
 一款 macOS 菜单栏常驻工具，为 Final Cut Pro 的时间线操作提供滚轮增强。
 仅对 FCP 前台生效，在其他应用中完全放行，不干扰系统滚动。
+
+> 关键词：FCPX插件、Final Cut Pro插件、FinalCut、FCP、时间线平移、滚轮增强、视频剪辑效率工具、macOS 效率插件。
 
 > 当前版本：**V1.0.1**（macOS 13.0+，仅 Apple Silicon arm64）
 
