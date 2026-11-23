@@ -25,27 +25,31 @@
 
 ![设置界面](Docs/设置界面_V1.0.1_最终.png)
 
-## 安装
+## 构建与安装
 
-**方式一：DMG**
-打开 `GlideCut-1.0.1.dmg`，将 GlideCut.app 拖入“应用程序”。
+本仓库**不含预编译安装包**（未做 Developer ID 签名与公证），请从源码构建：
 
-**方式二：PKG**
-双击 `GlideCut-1.0.1.pkg` 按向导安装（安装前会展示使用声明）。
+```bash
+# 1. 构建 Release
+xcodebuild -project GlideCut.xcodeproj -scheme GlideCut -configuration Release build
 
-**方式三：更新脚本**
-运行 `更新安装_V1.0.1.command`（安装前需阅读并确认使用声明）。
+# 2. 运行测试
+xcodebuild -project GlideCut.xcodeproj -scheme GlideCutTests -configuration Debug \
+  -destination 'platform=macOS' test
+
+# 3. 把构建产物装到“应用程序”
+APP=$(find ~/Library/Developer/Xcode/DerivedData/GlideCut-*/Build/Products/Release \
+  -maxdepth 1 -name GlideCut.app -type d | head -1)
+cp -R "$APP" /Applications/
+```
+
+也可用 Xcode 打开 `GlideCut.xcodeproj`，选择 `GlideCut` scheme 直接运行。
 
 > 首次运行需授予「输入监控」与「辅助功能」权限。因未做 Developer ID 签名与公证，
 > 首次打开如遇 Gatekeeper 提示，请右键 → 打开。
 
-## 构建
-
-```bash
-xcodebuild -project GlideCut.xcodeproj -scheme GlideCut -configuration Release build
-xcodebuild -project GlideCut.xcodeproj -scheme GlideCutTests -configuration Debug \
-  -destination 'platform=macOS' test
-```
+如需生成 PKG / DMG，可在本地执行 `pkgbuild` / `hdiutil`（仓库 `发行包/` 下有校验清单可参考），
+这些产物不会被提交到仓库。
 
 ## 目录结构
 
@@ -61,8 +65,8 @@ GlideCut/
 ├── Tests/                    单元测试（28 项）
 ├── Verification/             验证探针工具
 ├── Docs/                     技术与验收文档
-├── 发行包/                    PKG / DMG 安装包
-└── 更新安装_V1.0.1.command   安装脚本
+├── 发行包/                    安装包校验清单（PKG/DMG 不随仓库发布）
+└── 更新安装_V1.0.1.command   安装脚本（需本地 PKG，见校验清单）
 ```
 
 ## 技术说明

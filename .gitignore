@@ -35,9 +35,9 @@ __pycache__/
 # 本地审核草稿（含未发布的未来计划，不属于当前版本）
 GlideCut_项目全景与升级计划_审核版.md
 
-# 旧版本安装包（仅保留当前 V1.0.1）
-发行包/GlideCut-1.0.pkg
-发行包/GlideCut-1.0.dmg
+# 安装包不发布到仓库（未签名，仅本地构建产物）
+发行包/*.pkg
+发行包/*.dmg
 
 # Verification 目录下编译后的二进制（仅保留源码 .swift/.py）
 Verification/AXProbe
