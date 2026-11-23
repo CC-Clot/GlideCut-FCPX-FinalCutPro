@@ -1,0 +1,77 @@
+/* Menu Bar */
+"menu.listen.title" = "Enable Wheel Enhancement";
+"menu.openSettings.title" = "Open Settings…";
+"menu.quit.title" = "Quit GlideCut";
+
+/* Titles */
+"settings.title" = "GlideCut Settings";
+"settings.subtitle" = "Final Cut Pro timeline wheel enhancement";
+
+/* Status */
+"status.active" = "Active";
+"status.inactive" = "Paused";
+
+/* Sections */
+"settings.section.general" = "General";
+"settings.section.modifier" = "Modifiers";
+"settings.section.permission" = "Permissions";
+"settings.section.startup" = "Startup";
+"settings.section.about" = "About";
+
+/* General */
+"settings.feature.enabled" = "Enable wheel enhancement";
+"settings.feature.desc" = "Only applies in Final Cut Pro, never affects other apps";
+"settings.listening.on" = "Listening is active.";
+"settings.listening.off" = "Listening is stopped.";
+
+/* Modifiers */
+"settings.zoom.modifier" = "Timeline Zoom";
+"settings.zoom.desc" = "Scroll up to zoom in, down to zoom out";
+"settings.pan.modifier" = "Timeline Horizontal Pan";
+"settings.pan.desc" = "Default Shift native pan is recommended for smoother motion.";
+"settings.unavailable" = "Unavailable";
+"settings.modifier.conflict" = "Zoom and Pan cannot use the same modifier";
+
+/* Permissions */
+"settings.permission.inputMonitoring" = "Input Monitoring";
+"settings.permission.accessibility" = "Accessibility";
+"settings.permission.grantInput" = "Grant";
+"settings.permission.grantAccessibility" = "Grant";
+"settings.permission.refresh" = "Refresh";
+"permission.granted" = "Granted";
+"permission.denied" = "Denied";
+"settings.permission.status" = "Current Status";
+"settings.permission.ready" = "Permissions are ready. All features available.";
+"settings.permission.notReady" = "Permissions incomplete. Some features unavailable.";
+"settings.permission.openInputMonitoring" = "Open Input Monitoring Settings";
+"settings.permission.openAccessibility" = "Open Accessibility Settings";
+
+/* Startup */
+"settings.launchAtLogin" = "Launch at login";
+"settings.launchAtLogin.desc" = "Start GlideCut automatically after login";
+
+/* About */
+"settings.version.label" = "Version";
+"settings.os.label" = "Requires";
+"settings.restoreDefaults" = "Restore Defaults";
+"settings.sidebar.footnote" = "Menu bar only · Final Cut Pro only";
+"settings.about.releaseDate" = "Released";
+"settings.about.update.status" = "Version V1.0 is the latest release";
+"settings.about.repository" = "Source";
+"settings.about.releases" = "Releases";
+"settings.about.faq" = "FAQ";
+"settings.about.issues" = "Issues";
+"settings.about.author" = "By";
+"settings.section.about.title" = "About GlideCut";
+"about.currentVersion" = "Current Version";
+"about.developer" = "Developer";
+"about.qr.wechat" = "Author WeChat";
+"about.qr.reward" = "WeChat Reward";
+"about.qr.alipay" = "Alipay";
+"about.qr.contact" = "Contact Author";
+"about.qr.douyin" = "Follow on Douyin";
+"about.email.label" = "Email";
+"about.email.copy" = "Copy";
+"about.email.copied" = "Copied";
+"about.email.copy.help" = "Click to copy the author's email";
+"settings.about.intro" = "GlideCut is provided free of charge for personal use. Any form of commercial resale or bundled charging is prohibited. For licensing, feedback or suggestions, or cooperation, please contact the author.";

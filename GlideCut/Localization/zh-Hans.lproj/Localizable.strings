@@ -1,0 +1,77 @@
+/* 菜单栏 */
+"menu.listen.title" = "启用滚轮增强";
+"menu.openSettings.title" = "打开设置…";
+"menu.quit.title" = "退出 GlideCut";
+
+/* 标题 */
+"settings.title" = "GlideCut 设置";
+"settings.subtitle" = "Final Cut Pro 时间线滚轮增强";
+
+/* 状态 */
+"status.active" = "运行中";
+"status.inactive" = "已暂停";
+
+/* 分组 */
+"settings.section.general" = "通用";
+"settings.section.modifier" = "修饰键";
+"settings.section.permission" = "权限";
+"settings.section.startup" = "启动";
+"settings.section.about" = "关于";
+
+/* 通用 */
+"settings.feature.enabled" = "启用滚轮增强";
+"settings.feature.desc" = "仅在 Final Cut Pro 中生效，不影响其他应用";
+"settings.listening.on" = "监听正在进行。";
+"settings.listening.off" = "监听已停止。";
+
+/* 修饰键 */
+"settings.zoom.modifier" = "缩放时间线";
+"settings.zoom.desc" = "滚轮向上放大，向下缩小";
+"settings.pan.modifier" = "水平移动时间线";
+"settings.pan.desc" = "建议使用默认shift原生平移更丝滑。";
+"settings.unavailable" = "暂不可用";
+"settings.modifier.conflict" = "缩放与水平移动不能使用相同的修饰键";
+
+/* 权限 */
+"settings.permission.inputMonitoring" = "输入监控";
+"settings.permission.accessibility" = "辅助功能";
+"settings.permission.grantInput" = "前往授权";
+"settings.permission.grantAccessibility" = "前往授权";
+"settings.permission.refresh" = "刷新";
+"permission.granted" = "已授权";
+"permission.denied" = "未授权";
+"settings.permission.status" = "当前状态";
+"settings.permission.ready" = "权限已就绪，可使用全部功能。";
+"settings.permission.notReady" = "权限不完整，部分功能不可用。";
+"settings.permission.openInputMonitoring" = "打开「输入监控」设置";
+"settings.permission.openAccessibility" = "打开「辅助功能」设置";
+
+/* 启动 */
+"settings.launchAtLogin" = "开机时启动";
+"settings.launchAtLogin.desc" = "登录后自动运行 GlideCut";
+
+/* 关于 */
+"settings.version.label" = "版本";
+"settings.os.label" = "系统要求";
+"settings.restoreDefaults" = "恢复默认设置";
+"settings.sidebar.footnote" = "菜单栏常驻 · 仅在 Final Cut Pro 中生效";
+"settings.about.releaseDate" = "发布日期";
+"settings.about.update.status" = "当前版本 V1.0，已是最新发布版本";
+"settings.about.repository" = "开源地址";
+"settings.about.releases" = "最新版下载";
+"settings.about.faq" = "常见问题";
+"settings.about.issues" = "问题反馈";
+"settings.about.author" = "作者";
+"settings.section.about.title" = "关于 GlideCut";
+"about.currentVersion" = "当前版本";
+"about.developer" = "开发者";
+"about.qr.wechat" = "作者微信";
+"about.qr.reward" = "微信赞赏";
+"about.qr.alipay" = "支付宝";
+"about.qr.contact" = "联系作者";
+"about.qr.douyin" = "关注抖音";
+"about.email.label" = "联系邮箱";
+"about.email.copy" = "一键复制";
+"about.email.copied" = "已复制";
+"about.email.copy.help" = "点击复制作者邮箱";
+"settings.about.intro" = "GlideCut免费提供给个人使用，禁止任何形式的商业转卖或捆绑收费；如需授权、反馈建议或洽谈合作，请联系作者。";

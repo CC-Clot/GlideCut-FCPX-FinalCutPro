@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GlideCut 设置界面改版示例</title>
+<style>
+  :root{
+    --accent:#2f9e8f;
+    --accent-soft:#e6f2ef;
+    --ink:#1d1d1f;
+    --sub:#6e6e73;
+    --line:#e6e6e6;
+    --card-border:#e2e2e2;
+    --card-bg:#ffffff;
+    --page:#f7f8f8;
+    --desk:#cfd3d6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--desk);
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:34px 0 60px;
+    -webkit-font-smoothing:antialiased;
+    color:var(--ink);
+  }
+  .window{
+    width:672px;
+    background:var(--page);
+    border-radius:13px;
+    overflow:hidden;
+    box-shadow:0 26px 70px rgba(0,0,0,.28),0 4px 16px rgba(0,0,0,.12);
+  }
+  .titlebar{
+    height:39px;
+    background:linear-gradient(#f6f6f6,#eeeeee);
+    display:flex;
+    align-items:center;
+    padding:0 15px;
+    border-bottom:1px solid #dcdcdc;
+    position:relative;
+  }
+  .lights{display:flex;gap:8px;}
+  .light{width:12px;height:12px;border-radius:50%;}
+  .l1{background:#ff5f57;} .l2{background:#febc2e;} .l3{background:#28c840;}
+  .titlebar .t{
+    position:absolute;left:0;right:0;text-align:center;
+    font-size:13px;font-weight:600;color:#4a4a4f;pointer-events:none;
+  }
+
+  /* 顶部展示区（恢复原样） */
+  .header{
+    display:flex;align-items:center;gap:15px;
+    padding:18px 22px 17px;
+    background:#fff;
+  }
+  .app-icon{
+    width:56px;height:56px;border-radius:14px;flex:0 0 auto;
+    background:linear-gradient(145deg,#2b2f4a,#111327);
+    box-shadow:0 2px 6px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.12);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .app-icon svg{width:38px;height:38px;}
+  .hdr-text{flex:1;min-width:0;}
+  .hdr-name{font-size:21px;font-weight:700;letter-spacing:.2px;}
+  .hdr-sub{font-size:12.5px;color:var(--sub);margin-top:3px;}
+  .status{
+    display:flex;align-items:center;gap:7px;
+    padding:7px 12px;border-radius:999px;background:#f0f0f2;
+    font-size:12.5px;font-weight:600;
+  }
+  .status .dot{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 3px rgba(46,204,113,.15);}
+  .header-divider{height:1px;background:var(--line);}
+
+  /* 内容区：单列卡片，套用左侧菜单的圆角块样式 */
+  .content{padding:20px 22px 24px;display:flex;flex-direction:column;gap:15px;}
+
+  .card{
+    border:1px solid var(--card-border);
+    border-radius:11px;
+    background:var(--card-bg);
+    overflow:hidden;
+    box-shadow:0 1px 2px rgba(0,0,0,.03);
+  }
+  /* 分区标题：直接使用左侧菜单项那种青绿圆角色块 */
+  .card-head{
+    display:flex;align-items:center;gap:8px;
+    margin:10px 11px 0;
+    padding:8px 12px;
+    border-radius:8px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-size:12.5px;font-weight:700;
+  }
+  .card-head svg{width:14px;height:14px;}
+  .card-body{padding:8px 16px 13px;}
+  .row{display:flex;align-items:center;gap:12px;min-height:46px;}
+  .row + .row{border-top:1px solid #eee;}
+  .rtext{flex:1;min-width:0;}
+  .rtitle{font-size:13px;font-weight:600;}
+  .rdesc{font-size:11px;color:var(--sub);margin-top:2px;line-height:1.35;}
+
+  /* 开关 */
+  .toggle{width:38px;height:22px;border-radius:999px;background:#d8d8dc;position:relative;flex:0 0 auto;}
+  .toggle.on{background:var(--accent);}
+  .toggle i{position:absolute;top:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:.15s;}
+  .toggle.on i{left:18px;} .toggle i{left:2px;}
+
+  /* 下拉选择 */
+  .picker{
+    min-width:132px;height:29px;border:1px solid #d5d5d8;border-radius:7px;
+    background:linear-gradient(#fff,#f7f7f8);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 10px;font-size:12.5px;font-weight:600;flex:0 0 auto;
+    box-shadow:0 1px 1px rgba(0,0,0,.04);
+  }
+  .picker .arrows{display:flex;flex-direction:column;line-height:6px;font-size:9px;color:#888;margin-left:8px;}
+
+  /* 权限行 */
+  .perm{display:flex;align-items:center;gap:9px;min-height:30px;}
+  .perm + .perm{border-top:1px solid #eee;}
+  .perm .ic{width:15px;height:15px;}
+  .perm .name{flex:1;font-size:13px;font-weight:600;}
+  .perm .state{font-size:11px;color:var(--sub);}
+  .btn{
+    border:1px solid #d5d5d8;border-radius:7px;background:linear-gradient(#fff,#f6f6f7);
+    padding:5px 12px;font-size:11.5px;font-weight:600;box-shadow:0 1px 1px rgba(0,0,0,.04);
+  }
+
+  /* 关于 */
+  .about-meta{display:flex;gap:22px;flex-wrap:wrap;padding-bottom:9px;border-bottom:1px solid #eee;}
+  .about-meta div{font-size:11px;color:var(--sub);}
+  .about-meta b{font-size:11px;color:var(--ink);font-family:ui-monospace,Menlo,monospace;margin-left:4px;}
+  .about-line{font-size:11px;color:#555;line-height:1.6;margin-top:8px;}
+  .about-line a{color:var(--accent);text-decoration:none;font-weight:600;}
+  .about-foot{display:flex;align-items:center;margin-top:10px;}
+  .about-foot span{font-size:11px;color:var(--sub);}
+  .about-foot span b{color:var(--ink);}
+  .about-foot .spacer{flex:1;}
+  .note{
+    margin:2px 22px 0;font-size:10.5px;color:#9a9a9f;text-align:center;
+  }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="lights"><span class="light l1"></span><span class="light l2"></span><span class="light l3"></span></div>
+    <div class="t">GlideCut 设置</div>
+  </div>
+
+  <!-- 恢复顶部展示 -->
+  <div class="header">
+    <div class="app-icon">
+      <svg viewBox="0 0 40 40" fill="none">
+        <path d="M13 7c0-2 2-3 4-3h1c2 0 3 2 3 4v17l-3 4-3-4V7z" fill="#fff" stroke="#8b8fff" stroke-width="1.5"/>
+        <path d="M18 12c6 1 10 5 10 11" stroke="#b06cff" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M14 24l4 5 3-4" fill="#fff" stroke="#fff" stroke-width="1"/>
+        <circle cx="18" cy="10" r="1.6" fill="#ff7a90"/>
+      </svg>
+    </div>
+    <div class="hdr-text">
+      <div class="hdr-name">GlideCut</div>
+      <div class="hdr-sub">Final Cut Pro 时间线滚轮增强</div>
+    </div>
+    <div class="status"><span class="dot"></span>运行中</div>
+  </div>
+  <div class="header-divider"></div>
+
+  <div class="content">
+
+    <!-- 通用 -->
+    <div class="card">
+      <div class="card-head">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M2 4h12M2 8h12M2 12h12"/><circle cx="6" cy="4" r="1.6" fill="currentColor" stroke="none"/><circle cx="11" cy="8" r="1.6" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.6" fill="currentColor" stroke="none"/>
+        </svg>
+        通用
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="rtext"><div class="rtitle">启用滚轮增强</div><div class="rdesc">仅在 Final Cut Pro 中生效，不影响其他应用</div></div>
+          <div class="toggle on"><i></i></div>
+        </div>
+        <div class="row">
+          <div class="rtext"><div class="rtitle">开机时启动</div><div class="rdesc">登录后自动运行 GlideCut</div></div>
+          <div class="toggle on"><i></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 修饰键 -->
+    <div class="card">
+      <div class="card-head">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M2 5h12v7H2zM4 5V3h8v2M6 8h4M6 10h4"/>
+        </svg>
+        修饰键
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="rtext"><div class="rtitle">缩放时间线</div><div class="rdesc">滚轮向上放大，向下缩小</div></div>
+          <div class="picker">Command<span class="arrows">▲<br>▼</span></div>
+        </div>
+        <div class="row">
+          <div class="rtext"><div class="rtitle">水平移动时间线</div><div class="rdesc">建议使用默认shift原生平移更丝滑。</div></div>
+          <div class="picker">Shift<span class="arrows">▲<br>▼</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 权限 -->
+    <div class="card">
+      <div class="card-head">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M8 1.5l5 2v4c0 3-2 5.5-5 7-3-1.5-5-4-5-7v-4z"/><path d="M5.6 8l1.6 1.6 3.2-3.4"/>
+        </svg>
+        权限
+      </div>
+      <div class="card-body">
+        <div class="perm">
+          <svg class="ic" viewBox="0 0 16 16" fill="#2ecc71"><circle cx="8" cy="8" r="8"/><path d="M4.5 8l2.2 2.2L11.5 6" stroke="#fff" stroke-width="1.7" fill="none"/></svg>
+          <span class="name">输入监控</span><span class="state">已授权</span>
+        </div>
+        <div class="perm">
+          <svg class="ic" viewBox="0 0 16 16" fill="#2ecc71"><circle cx="8" cy="8" r="8"/><path d="M4.5 8l2.2 2.2L11.5 6" stroke="#fff" stroke-width="1.7" fill="none"/></svg>
+          <span class="name">辅助功能</span><span class="state">已授权</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="card">
+      <div class="card-head">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.6"/>
+        </svg>
+        关于
+      </div>
+      <div class="card-body">
+        <div class="about-meta">
+          <div>版本<b>V1.0</b></div>
+          <div>系统要求<b>macOS 13.0+</b></div>
+          <div>发布日期<b>2026-11-23</b></div>
+        </div>
+        <div class="about-line">当前版本 V1.0，已是最新发布版本 · <a href="#">最新版下载</a></div>
+        <div class="about-line"><a href="#">开源地址</a> · <a href="#">常见问题</a> · <a href="#">问题反馈</a></div>
+        <div class="about-line">本软件免费开源，代码托管于 GitHub。使用前请先阅读常见问题；仍有问题可到 GitHub 提交 Issue。</div>
+        <div class="about-line">本项目仅用于对技术的学习与研究，直至停止维护都将保持纯净；唯一发布地址为 GitHub，谨防被骗。</div>
+        <div class="about-foot"><span>作者 <b>GlideCut 开发者</b></span><span class="spacer"></span><span class="btn">恢复默认设置</span></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="note">示例图 · 顶部展示 + 右侧分区圆角块样式 · 无左侧导航栏</div>
+</div>
+</body>
+</html>

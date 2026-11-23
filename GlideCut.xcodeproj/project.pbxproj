@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000000000000000000030 /* GlideCutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010 /* GlideCutApp.swift */; };
+		A1000000000000000000031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000011 /* AppDelegate.swift */; };
+		A1000000000000000000032 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000012 /* MenuBarView.swift */; };
+		A1000000000000000000033 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000013 /* SettingsView.swift */; };
+		A1000000000000000000034 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000014 /* EventController.swift */; };
+		A1000000000000000000035 /* EventLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000015 /* EventLog.swift */; };
+		A1000000000000000000036 /* EventTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000016 /* EventTapController.swift */; };
+		A1000000000000000000037 /* FrontmostAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000017 /* FrontmostAppInfo.swift */; };
+		A1000000000000000000038 /* ModifierState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000018 /* ModifierState.swift */; };
+		A1000000000000000000039 /* WheelEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000019 /* WheelEvent.swift */; };
+		A1000000000000000000040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000020 /* Assets.xcassets */; };
+		A1000000000000000000041 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000021 /* Localizable.strings */; };
+		A1000000000000000000042 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000022 /* Localizable.strings */; };
+		A1000000000000000000043 /* WheelTapProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000023 /* WheelTapProbe.swift */; };
+		A1000000000000000000044 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000014 /* EventController.swift */; };
+		A1000000000000000000045 /* EventLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000015 /* EventLog.swift */; };
+		A1000000000000000000046 /* EventTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000016 /* EventTapController.swift */; };
+		A1000000000000000000047 /* FrontmostAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000017 /* FrontmostAppInfo.swift */; };
+		A1000000000000000000048 /* ModifierState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000018 /* ModifierState.swift */; };
+		A1000000000000000000049 /* WheelEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000019 /* WheelEvent.swift */; };
+		A10000000000000000000C2 /* WheelTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000C1 /* WheelTransformer.swift */; };
+		A10000000000000000000C3 /* WheelTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000C1 /* WheelTransformer.swift */; };
+		A10000000000000000000C5 /* PermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000C4 /* PermissionStatus.swift */; };
+		A10000000000000000000C6 /* PermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000C4 /* PermissionStatus.swift */; };
+		A10000000000000000000C8 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000C7 /* SettingsStore.swift */; };
+		A10000000000000000000C9 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000C7 /* SettingsStore.swift */; };
+		A10000000000000000000CB /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000CA /* MenuBarController.swift */; };
+		A10000000000000000000CD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000CC /* WindowController.swift */; };
+		A10000000000000000000CF /* ListeningPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000CE /* ListeningPreference.swift */; };
+		A10000000000000000000D1 /* PermissionsMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000D0 /* PermissionsMonitor.swift */; };
+		A10000000000000000000E9 /* CoreLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000E8 /* CoreLogicTests.swift */; };
+		A10000000000000000000F0 /* WheelEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000019 /* WheelEvent.swift */; };
+		A10000000000000000000F1 /* ModifierState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000018 /* ModifierState.swift */; };
+		A10000000000000000000F2 /* FrontmostAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000017 /* FrontmostAppInfo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1000000000000000000001 /* GlideCut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlideCut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1000000000000000000002 /* GlideCutWheelProbe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable.cmdline"; includeInIndex = 0; path = GlideCutWheelProbe; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1000000000000000000010 /* GlideCutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlideCutApp.swift; sourceTree = "<group>"; };
+		A1000000000000000000011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1000000000000000000012 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		A1000000000000000000013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A1000000000000000000014 /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
+		A1000000000000000000015 /* EventLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLog.swift; sourceTree = "<group>"; };
+		A1000000000000000000016 /* EventTapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTapController.swift; sourceTree = "<group>"; };
+		A1000000000000000000017 /* FrontmostAppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontmostAppInfo.swift; sourceTree = "<group>"; };
+		A1000000000000000000018 /* ModifierState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierState.swift; sourceTree = "<group>"; };
+		A1000000000000000000019 /* WheelEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelEvent.swift; sourceTree = "<group>"; };
+		A1000000000000000000020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1000000000000000000021 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Localizable.strings; sourceTree = "<group>"; };
+		A1000000000000000000022 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text; path = Localizable.strings; sourceTree = "<group>"; };
+		A1000000000000000000023 /* WheelTapProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelTapProbe.swift; sourceTree = "<group>"; };
+		A1000000000000000000024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10000000000000000000C1 /* WheelTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelTransformer.swift; sourceTree = "<group>"; };
+		A10000000000000000000C4 /* PermissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionStatus.swift; sourceTree = "<group>"; };
+		A10000000000000000000C7 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		A10000000000000000000CA /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		A10000000000000000000CC /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		A10000000000000000000CE /* ListeningPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningPreference.swift; sourceTree = "<group>"; };
+		A10000000000000000000D0 /* PermissionsMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsMonitor.swift; sourceTree = "<group>"; };
+		A10000000000000000000E1 /* GlideCutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlideCutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000E8 /* CoreLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLogicTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1000000000000000000072 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1000000000000000000075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1000000000000000000050 = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000051 /* GlideCut */,
+				A1000000000000000000058 /* Verification */,
+				A10000000000000000000EA /* Tests */,
+				A1000000000000000000059 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1000000000000000000051 /* GlideCut */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000052 /* App */,
+				A1000000000000000000053 /* Core */,
+				A1000000000000000000054 /* Resources */,
+				A1000000000000000000055 /* Localization */,
+				A1000000000000000000024 /* Info.plist */,
+			);
+			path = GlideCut;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000052 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000010 /* GlideCutApp.swift */,
+				A1000000000000000000011 /* AppDelegate.swift */,
+				A1000000000000000000012 /* MenuBarView.swift */,
+				A1000000000000000000013 /* SettingsView.swift */,
+				A10000000000000000000CA /* MenuBarController.swift */,
+				A10000000000000000000CC /* WindowController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000053 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000014 /* EventController.swift */,
+				A1000000000000000000015 /* EventLog.swift */,
+				A1000000000000000000016 /* EventTapController.swift */,
+				A1000000000000000000017 /* FrontmostAppInfo.swift */,
+				A1000000000000000000018 /* ModifierState.swift */,
+				A1000000000000000000019 /* WheelEvent.swift */,
+				A10000000000000000000C1 /* WheelTransformer.swift */,
+				A10000000000000000000C4 /* PermissionStatus.swift */,
+				A10000000000000000000C7 /* SettingsStore.swift */,
+				A10000000000000000000CE /* ListeningPreference.swift */,
+				A10000000000000000000D0 /* PermissionsMonitor.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000054 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000020 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000055 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000056 /* en.lproj */,
+				A1000000000000000000057 /* zh-Hans.lproj */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000056 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000021 /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000057 /* zh-Hans.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000022 /* Localizable.strings */,
+			);
+			path = zh-Hans.lproj;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000058 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000023 /* WheelTapProbe.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000059 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000001 /* GlideCut.app */,
+				A1000000000000000000002 /* GlideCutWheelProbe */,
+				A10000000000000000000E1 /* GlideCutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000060 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000EA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000E8 /* CoreLogicTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1000000000000000000080 /* GlideCut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000A0 /* Build configuration list for PBXNativeTarget "GlideCut" */;
+			buildPhases = (
+				A1000000000000000000070 /* Sources */,
+				A1000000000000000000071 /* Resources */,
+				A1000000000000000000072 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlideCut;
+			productName = GlideCut;
+			productReference = A1000000000000000000001 /* GlideCut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1000000000000000000081 /* GlideCutWheelProbe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000A1 /* Build configuration list for PBXNativeTarget "GlideCutWheelProbe" */;
+			buildPhases = (
+				A1000000000000000000073 /* Sources */,
+				A1000000000000000000074 /* Resources */,
+				A1000000000000000000075 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlideCutWheelProbe;
+			productName = GlideCutWheelProbe;
+			productReference = A1000000000000000000002 /* GlideCutWheelProbe */;
+			productType = "com.apple.product-type.tool";
+		};
+		A10000000000000000000E0 /* GlideCutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000E2 /* Build configuration list for PBXNativeTarget "GlideCutTests" */;
+			buildPhases = (
+				A10000000000000000000E5 /* Sources */,
+				A10000000000000000000E6 /* Frameworks */,
+				A10000000000000000000E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlideCutTests;
+			productName = GlideCutTests;
+			productReference = A10000000000000000000E1 /* GlideCutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1000000000000000000090 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					A1000000000000000000080 = {
+						BuildPhaseOrdering = (
+						);
+					};
+					A1000000000000000000081 = {
+						BuildPhaseOrdering = (
+						);
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000A2 /* Build configuration list for PBXProject "GlideCut" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = A1000000000000000000050;
+			minimizedProjectReferenceProxies = 1;
+			productRefGroup = A1000000000000000000059 /* Products */;
+			projectDirPath = "";
+			projectRootPath = "";
+			targets = (
+				A1000000000000000000080 /* GlideCut */,
+				A1000000000000000000081 /* GlideCutWheelProbe */,
+				A10000000000000000000E0 /* GlideCutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1000000000000000000071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000040 /* Assets.xcassets in Resources */,
+				A1000000000000000000041 /* Localizable.strings in Resources */,
+				A1000000000000000000042 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1000000000000000000074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1000000000000000000070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000030 /* GlideCutApp.swift in Sources */,
+				A1000000000000000000031 /* AppDelegate.swift in Sources */,
+				A1000000000000000000032 /* MenuBarView.swift in Sources */,
+				A1000000000000000000033 /* SettingsView.swift in Sources */,
+				A10000000000000000000CB /* MenuBarController.swift in Sources */,
+				A10000000000000000000CD /* WindowController.swift in Sources */,
+				A1000000000000000000034 /* EventController.swift in Sources */,
+				A1000000000000000000035 /* EventLog.swift in Sources */,
+				A1000000000000000000036 /* EventTapController.swift in Sources */,
+				A1000000000000000000037 /* FrontmostAppInfo.swift in Sources */,
+				A1000000000000000000038 /* ModifierState.swift in Sources */,
+				A1000000000000000000039 /* WheelEvent.swift in Sources */,
+				A10000000000000000000C2 /* WheelTransformer.swift in Sources */,
+				A10000000000000000000C5 /* PermissionStatus.swift in Sources */,
+				A10000000000000000000C8 /* SettingsStore.swift in Sources */,
+				A10000000000000000000CF /* ListeningPreference.swift in Sources */,
+				A10000000000000000000D1 /* PermissionsMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1000000000000000000073 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000043 /* WheelTapProbe.swift in Sources */,
+				A1000000000000000000044 /* EventController.swift in Sources */,
+				A1000000000000000000045 /* EventLog.swift in Sources */,
+				A1000000000000000000046 /* EventTapController.swift in Sources */,
+				A1000000000000000000047 /* FrontmostAppInfo.swift in Sources */,
+				A1000000000000000000048 /* ModifierState.swift in Sources */,
+				A1000000000000000000049 /* WheelEvent.swift in Sources */,
+				A10000000000000000000C3 /* WheelTransformer.swift in Sources */,
+				A10000000000000000000C6 /* PermissionStatus.swift in Sources */,
+				A10000000000000000000C9 /* SettingsStore.swift in Sources */,
+				A10000000000000000000CF /* ListeningPreference.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000E9 /* CoreLogicTests.swift in Sources */,
+				A10000000000000000000F0 /* WheelEvent.swift in Sources */,
+				A10000000000000000000F1 /* ModifierState.swift in Sources */,
+				A10000000000000000000F2 /* FrontmostAppInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_PREFIX_REGISTER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10000000000000000000B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_PREFIX_REGISTER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A10000000000000000000B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "GlideCut Local Signing";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFO_PLIST_FILE = NO;
+				INFOPLIST_FILE = GlideCut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccmac.GlideCut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A10000000000000000000B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "GlideCut Local Signing";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFO_PLIST_FILE = NO;
+				INFOPLIST_FILE = GlideCut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccmac.GlideCut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A10000000000000000000B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A10000000000000000000B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A10000000000000000000E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "GlideCut Local Signing";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccmac.GlideCutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A10000000000000000000E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "GlideCut Local Signing";
+				CODE_SIGN_STYLE = Manual;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccmac.GlideCutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCBuildConfigurationList section */
+		A10000000000000000000A0 /* Build configuration list for PBXNativeTarget "GlideCut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000B2 /* Debug */,
+				A10000000000000000000B3 /* Release */,
+			);
+			defaultConfiguration = A10000000000000000000B3 /* Release */;
+			defaultConfigurationIsVisible = 0;
+			name = "Build configuration list for PBXNativeTarget \"GlideCut\"";
+		};
+		A10000000000000000000A1 /* Build configuration list for PBXNativeTarget "GlideCutWheelProbe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000B4 /* Debug */,
+				A10000000000000000000B5 /* Release */,
+			);
+			defaultConfiguration = A10000000000000000000B5 /* Release */;
+			defaultConfigurationIsVisible = 0;
+			name = "Build configuration list for PBXNativeTarget \"GlideCutWheelProbe\"";
+		};
+		A10000000000000000000A2 /* Build configuration list for PBXProject "GlideCut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000B0 /* Debug */,
+				A10000000000000000000B1 /* Release */,
+			);
+			defaultConfiguration = A10000000000000000000B1 /* Release */;
+			defaultConfigurationIsVisible = 0;
+			name = "Build configuration list for PBXProject \"GlideCut\"";
+		};
+		A10000000000000000000E2 /* Build configuration list for PBXNativeTarget "GlideCutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000E3 /* Debug */,
+				A10000000000000000000E4 /* Release */,
+			);
+			defaultConfiguration = A10000000000000000000E3 /* Debug */;
+			defaultConfigurationIsVisible = 0;
+			name = "Build configuration list for PBXNativeTarget \"GlideCutTests\"";
+		};
+/* End XCBuildConfigurationList section */
+	};
+	rootObject = A1000000000000000000090 /* Project object */;
+}
